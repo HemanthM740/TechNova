@@ -44,7 +44,7 @@ specifically so you can demo the two centerpiece rules immediately.
    try booking 09:30–10:30 (rejected, overlaps the existing 09:00–10:00
    slot) then 10:00–11:00 (accepted, since it starts right after).
 
-## Project structure — split for 4 people to push independently
+## Project structure 
 
 Each person owns one vertical slice: a backend route file + its
 matching frontend view file. Nobody edits the same file as anyone else.
@@ -74,19 +74,6 @@ frontend/js/
   api.js / main.js   → shared bootstrap, agree on this before splitting up
 ```
 
-### Suggested workflow
-1. Everyone pulls `main` with `db.js`, `middleware/auth.js`, `server.js`,
-   and the `frontend/js/api.js` + `main.js` + `index.html` + `style.css`
-   already in place (these are the shared contracts — don't change
-   field names in `db.js` unilaterally).
-2. Each person works on their own branch, touching only their route
-   file(s) and matching frontend view file(s).
-3. Merge branches back into `main` — since nobody touches the same
-   files, merges should be conflict-free.
-4. Reserve the last 10–15 minutes to run the app together, seed-check,
-   and rehearse the two demo beats above before presenting.
-
-## What's intentionally scoped out (2-hour cut)
 
 - Audit Cycle screen
 - Full Reports & Analytics (utilization trends, heatmaps)
