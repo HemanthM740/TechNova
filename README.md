@@ -52,25 +52,25 @@ matching frontend view file. Nobody edits the same file as anyone else.
 ```
 backend/
   routes/
-    auth.js          → Person 1 (Auth + roles)
-    org.js            → Person 1 (Departments, Categories, Employee Directory)
-    assets.js          → Person 2 (Asset registry)
-    allocations.js      → Person 2 (Allocation + transfer + conflict rule)
-    bookings.js          → Person 3 (Resource booking + overlap rule)
-    maintenance.js        → Person 4 (Maintenance workflow)
-    dashboard.js            → Person 4 (KPI dashboard)
+    auth.js          →  (Auth + roles)
+    org.js            →  (Departments, Categories, Employee Directory)
+    assets.js          → (Asset registry)
+    allocations.js      →  (Allocation + transfer + conflict rule)
+    bookings.js          →  (Resource booking + overlap rule)
+    maintenance.js        →  (Maintenance workflow)
+    dashboard.js            →  (KPI dashboard)
   middleware/auth.js  → shared, agree on this before splitting up
   db.js               → shared schema + seed data, agree on this first
   server.js           → shared, wires all routes together
 
 frontend/js/
-  auth.js       → Person 1
-  org.js         → Person 1
-  assets.js       → Person 2
-  allocations.js   → Person 2
-  bookings.js        → Person 3
-  maintenance.js      → Person 4
-  dashboard.js          → Person 4
+  auth.js       
+  org.js         
+  assets.js       
+  allocations.js   
+  bookings.js        
+  maintenance.js      
+  dashboard.js          
   api.js / main.js   → shared bootstrap, agree on this before splitting up
 ```
 
