@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AssetFlow — Enterprise Asset & Resource Management</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="auth-screen" class="auth-wrap" hidden>
+  <div class="auth-card">
+    <div class="mark">AssetFlow</div>
+    <div class="sub">Asset &amp; Resource Ledger</div>
+
+    <div class="auth-toggle">
+      <button id="tab-login" class="active">Log in</button>
+      <button id="tab-signup">Sign up</button>
+    </div>
+
+    <div id="auth-banner"></div>
+
+    <form id="login-form">
+      <label>Email</label>
+      <input type="email" id="login-email" required />
+      <label>Password</label>
+      <input type="password" id="login-password" required />
+      <button type="submit" class="btn" style="width:100%">Log in</button>
+    </form>
+
+    <form id="signup-form" hidden>
+      <label>Full name</label>
+      <input type="text" id="signup-name" required />
+      <label>Email</label>
+      <input type="email" id="signup-email" required />
+      <label>Password</label>
+      <input type="password" id="signup-password" required />
+      <button type="submit" class="btn" style="width:100%">Create employee account</button>
+    </form>
+
+    <div class="demo-hint">
+      Seeded logins —<br/>
+      Admin: <span class="mono">admin@assetflow.io / admin123</span><br/>
+      Asset Manager: <span class="mono">manager@assetflow.io / password123</span><br/>
+      Employee: <span class="mono">priya@assetflow.io / password123</span><br/>
+      Employee: <span class="mono">raj@assetflow.io / password123</span>
+    </div>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <div class="sidebar">
+    <div class="brand">
+      <div class="mark">AssetFlow</div>
+      <div class="sub">Asset &amp; Resource Ledger</div>
+    </div>
+    <div class="nav-item active" data-view="dashboard"><span class="num">01</span>Dashboard</div>
+    <div class="nav-item" data-view="org" data-admin-only><span class="num">02</span>Org Setup</div>
+    <div class="nav-item" data-view="assets"><span class="num">03</span>Assets</div>
+    <div class="nav-item" data-view="allocations"><span class="num">04</span>Allocations</div>
+    <div class="nav-item" data-view="bookings"><span class="num">05</span>Bookings</div>
+    <div class="nav-item" data-view="maintenance"><span class="num">06</span>Maintenance</div>
+
+    <div class="sidebar-footer">
+      <div class="who">
+        <div id="who-name">—</div>
+        <span class="role" id="who-role">—</span>
+      </div>
+      <a href="#" class="logout-link" id="logout-btn">Log out</a>
+    </div>
+  </div>
+
+  <main id="main"></main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/org.js"></script>
+<script src="js/assets.js"></script>
+<script src="js/allocations.js"></script>
+<script src="js/bookings.js"></script>
+<script src="js/maintenance.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
